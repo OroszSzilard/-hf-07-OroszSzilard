@@ -1,24 +1,21 @@
 package homework;
 
-public class EBook extends Book {
-    private String url;
+public class EBook extends Book
+{
+	private String url;
 
-    public EBook(String name, int price, String author, String title, int price2, int yearOfPublication, int pages,
-			String style, String url) {
-		super(name, price, author, title, price2, yearOfPublication, pages, style);
+	public EBook(String title, String author, int price, int pages, String style, String url) {
+		super(author, title, price, pages, style);
 		this.url = url;
 	}
 
-	public String getUrl() {
-        return url;
-    }
+	@Override
+	public String toString() {
+		return "EBook [url=" + url + "]";
+	}
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	
 
-    @Override
-    public String toString() {
-        return "EBook: " + super.toString() + ", URL: " + url;
-    }
+	
+	
 }
